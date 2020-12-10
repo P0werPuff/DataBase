@@ -32,15 +32,19 @@
             this.Toodetxt = new System.Windows.Forms.TextBox();
             this.Kogustxt = new System.Windows.Forms.TextBox();
             this.Hindtxt = new System.Windows.Forms.TextBox();
-            this.btn_Add = new System.Windows.Forms.Button();
-            this.btn_Update = new System.Windows.Forms.Button();
-            this.btn_Delete = new System.Windows.Forms.Button();
+            this.btn_add = new System.Windows.Forms.Button();
+            this.btn_update = new System.Windows.Forms.Button();
+            this.btn_delete = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.toodetableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toodedDataSet = new DataBase.ToodedDataSet();
             this.toodetableTableAdapter = new DataBase.ToodedDataSetTableAdapters.ToodetableTableAdapter();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_LisaPilt = new System.Windows.Forms.Button();
+            this.ImgShow = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toodetableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toodedDataSet)).BeginInit();
@@ -68,34 +72,34 @@
             this.Hindtxt.Size = new System.Drawing.Size(144, 20);
             this.Hindtxt.TabIndex = 2;
             // 
-            // btn_Add
+            // btn_add
             // 
-            this.btn_Add.Location = new System.Drawing.Point(12, 395);
-            this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(61, 43);
-            this.btn_Add.TabIndex = 3;
-            this.btn_Add.Text = "Lisa uus";
-            this.btn_Add.UseVisualStyleBackColor = true;
-            this.btn_Add.Click += new System.EventHandler(this.btn_Update_Click);
+            this.btn_add.Location = new System.Drawing.Point(12, 368);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(61, 43);
+            this.btn_add.TabIndex = 3;
+            this.btn_add.Text = "Lisa uus";
+            this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.Click += new System.EventHandler(this.btn_Update_Click);
             // 
-            // btn_Update
+            // btn_update
             // 
-            this.btn_Update.Location = new System.Drawing.Point(79, 395);
-            this.btn_Update.Name = "btn_Update";
-            this.btn_Update.Size = new System.Drawing.Size(61, 43);
-            this.btn_Update.TabIndex = 4;
-            this.btn_Update.Text = "Uuenda";
-            this.btn_Update.UseVisualStyleBackColor = true;
+            this.btn_update.Location = new System.Drawing.Point(79, 368);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(61, 43);
+            this.btn_update.TabIndex = 4;
+            this.btn_update.Text = "Uuenda";
+            this.btn_update.UseVisualStyleBackColor = true;
             // 
-            // btn_Delete
+            // btn_delete
             // 
-            this.btn_Delete.Location = new System.Drawing.Point(146, 395);
-            this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(61, 43);
-            this.btn_Delete.TabIndex = 5;
-            this.btn_Delete.Text = "Kustuda";
-            this.btn_Delete.UseVisualStyleBackColor = true;
-            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click_1);
+            this.btn_delete.Location = new System.Drawing.Point(146, 368);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(61, 43);
+            this.btn_delete.TabIndex = 5;
+            this.btn_delete.Text = "Kustuda";
+            this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_Delete_Click_1);
             // 
             // dataGridView1
             // 
@@ -122,33 +126,75 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 146);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 176);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(181, 201);
+            this.pictureBox1.Size = new System.Drawing.Size(262, 171);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // btn_LisaPilt
+            // ImgShow
             // 
-            this.btn_LisaPilt.Location = new System.Drawing.Point(199, 304);
-            this.btn_LisaPilt.Name = "btn_LisaPilt";
-            this.btn_LisaPilt.Size = new System.Drawing.Size(61, 43);
-            this.btn_LisaPilt.TabIndex = 8;
-            this.btn_LisaPilt.Text = "Lisa Pilt";
-            this.btn_LisaPilt.UseVisualStyleBackColor = true;
-            this.btn_LisaPilt.Click += new System.EventHandler(this.btn_LisaPilt_Click_1);
+            this.ImgShow.Location = new System.Drawing.Point(213, 368);
+            this.ImgShow.Name = "ImgShow";
+            this.ImgShow.Size = new System.Drawing.Size(61, 43);
+            this.ImgShow.TabIndex = 8;
+            this.ImgShow.Text = "Lisa Pilt";
+            this.ImgShow.UseVisualStyleBackColor = true;
+            this.ImgShow.Click += new System.EventHandler(this.btn_LisaPilt_Click_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(195, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 19);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Toode";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 10.18868F);
+            this.label2.Location = new System.Drawing.Point(195, 62);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 19);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Kogus";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Nirmala UI", 10.18868F);
+            this.label3.Location = new System.Drawing.Point(195, 98);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 19);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Hind";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(31, 123);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 12;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btn_LisaPilt);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ImgShow);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btn_Delete);
-            this.Controls.Add(this.btn_Update);
-            this.Controls.Add(this.btn_Add);
+            this.Controls.Add(this.btn_delete);
+            this.Controls.Add(this.btn_update);
+            this.Controls.Add(this.btn_add);
             this.Controls.Add(this.Hindtxt);
             this.Controls.Add(this.Kogustxt);
             this.Controls.Add(this.Toodetxt);
@@ -169,15 +215,19 @@
         private System.Windows.Forms.TextBox Toodetxt;
         private System.Windows.Forms.TextBox Kogustxt;
         private System.Windows.Forms.TextBox Hindtxt;
-        private System.Windows.Forms.Button btn_Add;
-        private System.Windows.Forms.Button btn_Update;
-        private System.Windows.Forms.Button btn_Delete;
+        private System.Windows.Forms.Button btn_add;
+        private System.Windows.Forms.Button btn_update;
+        private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.DataGridView dataGridView1;
         private ToodedDataSet toodedDataSet;
         private System.Windows.Forms.BindingSource toodetableBindingSource;
         private ToodedDataSetTableAdapters.ToodetableTableAdapter toodetableTableAdapter;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btn_LisaPilt;
+        private System.Windows.Forms.Button ImgShow;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
